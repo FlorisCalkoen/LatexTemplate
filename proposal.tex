@@ -1,0 +1,45 @@
+\documentclass{TUD-phdReport2021}
+
+\usepackage[style=apa]{biblatex}
+\usepackage{csquotes}
+
+\addbibresource{proposal.bib}
+
+\begin{document}
+
+%% Specify the title and author of the thesis. This information will be used on
+%% the title page (in title/title.tex) and in the metadata of the final PDF.
+\title[subtitle]{title}
+\author{firstname}{lastname}
+
+%% Use Roman numerals for the page numbers of the title pages and table of
+%% contents.
+\frontmatter
+
+\include{title/title}
+
+%% The (optional) dedication can be used to thank someone or display a
+%% significant quotation.
+\tableofcontents
+
+%% Use Arabic numerals for the page numbers of the chapters.
+\mainmatter
+
+%% Turn on thumb indices.
+\thumbtrue
+
+\include{introduction/introduction}
+
+%% Use letters for the chapter numbers of the appendices.
+% \appendix
+
+%\include{appendix-a/appendix-a}
+
+%% Turn off thumb indices for unnumbered chapters.
+\thumbfalse
+\printbibliography
+
+
+
+\end{document}
+
