@@ -1,45 +1,29 @@
-\documentclass{TUD-phdReport2021}
+\documentclass{article}
 
-\usepackage[style=apa]{biblatex}
+\usepackage[ backend=biber, style=apa, sorting=ynt ]{biblatex}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{hyperref}
 \usepackage{csquotes}
-
-\addbibresource{proposal.bib}
+\usepackage[acronym]{glossaries}
+\usepackage{amsmath}
+ 
+\addbibresource{references.bib}
 
 \begin{document}
 
-%% Specify the title and author of the thesis. This information will be used on
-%% the title page (in title/title.tex) and in the metadata of the final PDF.
-\title[subtitle]{title}
-\author{firstname}{lastname}
+\input{title/title}
 
-%% Use Roman numerals for the page numbers of the title pages and table of
-%% contents.
-\frontmatter
-
-\include{title/title}
-
-%% The (optional) dedication can be used to thank someone or display a
-%% significant quotation.
 \tableofcontents
 
-%% Use Arabic numerals for the page numbers of the chapters.
-\mainmatter
+\section{Introduction}
+Some text and references \cite{calkoenTraditionalVsMachineLearning2021}.
 
-%% Turn on thumb indices.
-\thumbtrue
-
-\include{introduction/introduction}
-
-%% Use letters for the chapter numbers of the appendices.
-% \appendix
-
-%\include{appendix-a/appendix-a}
-
-%% Turn off thumb indices for unnumbered chapters.
-\thumbfalse
 \printbibliography
-
-
-
+\printglossary
+\appendix
 \end{document}
-
